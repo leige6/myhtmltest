@@ -1,0 +1,17 @@
+.topbaner{
+    background-color:#8A25C6;
+    height:80px;
+}
+.content{
+    position: relative;
+    background: url("../images/topbanner.jpg") no-repeat;
+    height:80px;
+}
+.content i{
+    width: 19px;
+    height: 19px;
+    background: url("../images/close.png");
+    position: absolute;
+    top:5px;
+    right: 0;
+}

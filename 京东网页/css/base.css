@@ -95,10 +95,15 @@ s,i,em{font-style:normal;text-decoration:none;}
     padding: 0 20px 0 10px;
 }
 .fr li.tel{
-    padding: 0 20px;
+    padding: 0 20px 0 25px;
 }
 .tel .telphone{
-   
+    width: 15px;
+   height: 20px;
+   background: url("../images/sprite.png") no-repeat;
+    position: absolute;
+    top:6px;
+    left:7px;
 }
 
 
