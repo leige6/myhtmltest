@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+.content{
+margin: 100px auto;
+	width: 250px;
+	height: 100px;
+}
+		.content input{
+			float: left;
+			width: 100px;
+		}
+		.content span{
+			float: left;
+			width: 80px;
+		}
+	</style>
+	<script type="application/javascript">
+window.onload=function () {
+     var btn=document.getElementById('send');
+     var count=5;
+     var timer=null;
+     btn.onclick=function () {
+         clearInterval(timer);
+         var that=this;
+         that.disabled=true;
+         that.innerHTML=count+"秒后失效";
+		 timer=setInterval(sendMessage,1000);
+         function sendMessage() {
+             count--;
+             if(count>0){
+                 that.innerHTML=count+"秒后失效";
+			 }else{
+                 clearInterval(timer);
+                 that.innerHTML="点击重新发送";
+                 that.disabled=false;
+                 count=5;
+			 }
+
+         }
+		 
+     }
+}
+	</script>
+</head>
+<body>
+	<div class="content">
+		<input type="text"><button id="send">发送验证码</button>
+	</div>
+</body>
+</html>
