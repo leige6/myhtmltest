@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+      *{
+		  margin: 0;
+		  padding: 0;
+	  }
+.box {
+	height: 310px;
+	width: 646px;
+	padding: 88px 78px 202px 76px;
+	margin: 100px auto;
+	background: url("images/pc.png");
+}
+		.box .top{
+           width: 100%;
+			height: 20%;
+		}
+	  .box .middle{
+		  width: 100%;
+		  height: 60%;
+		  border:1px solid red;
+		  text-align: center;
+		  line-height: 186px;
+	  }
+	  .box .bottem{
+		  width: 100%;
+		  height: 20%;
+	  }
+		.top h1{
+			text-align: center;
+			line-height: 62px;
+			font-size: 40px;
+			font-family: "SimSun", "宋体";
+			color: #C81623;
+			font-weight: 700;
+
+		}
+		.middle span{
+
+			font-size: 100px;
+			font-family: "SimSun", "宋体";
+			color: #C81623;
+			font-weight: 400;
+		}
+	</style>
+	<script type="application/javascript">
+      window.onload=function () {
+         var names=new Array("张亚磊","邢玉洁","张殿洋","代树里","张可乐","杨应海");
+          var name=document.getElementById("name");
+          var i=0;
+          var total=names.length;
+          setInterval(function () {
+              if(i<total){
+                  name.innerHTML=names[i];
+                  i++;
+			  }else{
+                  i=0;
+			  }
+          },80)
+      }
+	</script>
+</head>
+<body>
+<div class="box" id="box">
+<div class="top">
+	<h1>微金客抽奖活动</h1>
+</div>
+	<div class="middle">
+     <span id="name"></span>
+	</div>
+	<div class="bottem">
+
+	</div>
+</div>
+</body>
+</html>

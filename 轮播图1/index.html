@@ -64,12 +64,18 @@
 				 }
 				 this.className="current";
                  target = -this.index * 490; // 目标位置 就是用当前的索引号乘以  一个盒子的宽度
+				 console.log(target);
+                 var timer=setInterval(function() {
+                     leader = leader + (target - leader ) / 10;
+                     console.log(leader);
+                     ul.style.left = leader + "px";
+                     setTimeout(function () {
+                         clearInterval(timer);
+                     },5000);
+                 },30);
              }
 		 }
-         setInterval(function() {
-             leader = leader + (target - leader ) / 10;
-             ul.style.left = leader + "px";
-         },30);
+
      }
 	</script>
 </head>
