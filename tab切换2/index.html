@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	  body,div,ul,li,ol,dl,dt,p,dd,img,input,a,span,h1,h2,h3,h4{padding:0; margin:0; border:0; list-style:none;}
+		.box{
+			height:475px;
+			width: 1000px;
+			margin:0 auto;
+			margin-top: 100px;
+		}
+		.tab {
+			width: 322px;
+			height: 37px;
+			border: 1px solid #ddd;
+			border-bottom: 0;
+		}
+		.tab li{
+			width: 80px;
+			height: 34px;
+			position: relative;
+			float: left;
+			line-height: 34px;
+			text-align: center;
+			cursor: pointer;
+			border-top:4px solid #fff;
+		}
+	  .tab span{
+		  position: absolute;
+		  width: 1px;
+		  height: 14px;
+		  right: 0;
+		  top: 10px;
+		  background: #ddd;
+		  overflow: hidden;
+	  }
+
+		.tab  li.active{
+			border-color: red;
+			border-bottom: 0;
+		}
+		.products{
+			height:476px;
+			width: 1002px;
+			border: 1px solid #ddd;
+		}
+	  .products .main{
+		  display: none;
+
+	  }
+	  .products .select{
+		  display: block;
+	  }
+	</style>
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script type="application/javascript">
+     $(function(){
+         $(".tab li").mouseenter(function(){
+             var $this = $(this);
+			 var index = $this.index();
+             $this.addClass("active").siblings("li").removeClass("active");
+             $(".products div").eq(index).addClass("select").siblings("div").removeClass("select");
+
+		 });
+	 });
+	</script>
+</head>
+<body>
+<div class="box">
+	<ul class="tab">
+		<li class="tab-item active">国际大牌<span></span></li>
+		<li class="tab-item">国妆名牌<span></span></li>
+		<li class="tab-item">清洁用品<span></span></li>
+		<li class="tab-item">男士精品</li>
+	</ul>
+	<div class="products">
+		<div class="main select"><a href=""><img src="imgs/guojidapai.jpg" alt=""></a></div>
+		<div class="main"><a href=""><img src="imgs/guozhuangmingpin.jpg" alt=""></a></div>
+		<div class="main"><a href=""><img src="imgs/qingjieyongpin.jpg" alt=""></a></div>
+		<div class="main"><a href=""><img src="imgs/nanshijingpin.jpg" alt=""></a></div>
+	</div>
+</div>
+</body>
+</html>
