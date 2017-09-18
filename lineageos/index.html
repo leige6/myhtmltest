@@ -9,17 +9,18 @@
 		a{
 			text-decoration: none;
 		}
-		body{
-			background-color: #FAFAFA;
-		}
 		.center{
 			margin: 0 auto;
 			width: 1142px;
-
 		}
-      .head{
-
-	  }
+		.head{
+			width: 100%;
+			background-color: #FFFFFF;
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 100;
+		}
 		.nav{
 			height: 70px;
 		}
@@ -58,7 +59,9 @@
 		  top:4px;
 	  }
 		.carousel{
+			margin-top: 70px;
 			background-color: #167C80;
+			box-shadow: 0 0 10px #ccc;
 		}
 	  .carousel .cmid{
 		  height: 183px;
@@ -75,6 +78,10 @@
 		  position: absolute;
 		  top:160px;
 		  left:0;
+	  }
+	  .content{
+		  background-color: #FAFAFA;
+		  padding-bottom: 26px;
 	  }
 .content .item{
 	height: 218px;
@@ -137,8 +144,59 @@
 	  .item .bot a{
 		  color: #167C80;
 	  }
+		.bootom{
+			height: 177px;
+			background-color: #EEEEEE;
+		}
+		.blogo img{
+			width: 191px;
+			margin-top: 29px;
+		}
+		.binfo{
+			margin-top: 16px;
+		}
+	  .binfo li{
+		  font-size: 14px;
+		  color: #777;
+		  line-height: 14px;
+		  margin-top: 5px;
+	  }
+	  .binfo li span{
+		  color: #167c80;
+	  }
+	  .binfo li img{
+		  position:relative;
+        width: 14px;
+		  top:3px;
+	  }
+	  .content .pages{
+		  height: 20px;
+	  }
+	  .pa{
+		  height: 16px;
+		  margin-top: 20px;
+		  width: 1142px;
+		  text-align: center;
+	  }
+		.pages li{
+			display:inline-block;
+			text-align: center;
+			font-size: 16px;
+			line-height: 16px;
+			padding: 4px 8px;
+			background-color: #3C4858;
+			margin-right: 10px;
+			border-radius: 10%;
+		}
+	  .pages .active{
+		  background-color:#167c80;
+	  }
+	  .pages li a{
+		  color: #EEEEEE;
+		  cursor: pointer;
+	  }
 	</style>
-
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
 	<script type="application/javascript">
 
 	</script>
@@ -200,6 +258,33 @@
 			<a href="#">READ MORE</a>
 		</div>
 	</div>
+	<div class="pa">
+		<ul class="pages center">
+			<li class="active"><a href="#" >1</a></li>
+			<li><a href="#" >2</a></li>
+			<li><a href="#" >3</a></li>
+			<li><a href="#" >4</a></li>
+			<li><a href="#" >5</a></li>
+			<li><a href="#" >&bull;&bull;&bull;</li>
+			<li><a href="#" >98</a></li>
+			<li><a href="#" >99</a></li>
+			<li><a href="#" >100</a></li>
+		</ul>
+	</div>
+
+</div>
+<div class="bootom">
+  <div class="bcontent center">
+	  <div class="blogo"><img src="images/logo-3.png" alt=""></div>
+	  <div class="binfo">
+		  <ul>
+			  <li class="first"><img src="images/com_7.png" alt=""><b>2016 - 2017 The LineageOS Project </b></li>
+			  <li>Bitcoin:<a href="#"><span>12aDckQC6YHEn75zReQWxXFCivBBNXfRjM</span></a></li>
+			  <li>PayPal:<a href="#"><span> paypal.me/LineageOS </span></li>
+			  <li>Note: LineageOS LLC is not a 501(c)(3) non-profit,as such donations are not tax-exempt.</li>
+		  </ul>
+	  </div>
+  </div>
 </div>
 </body>
 </html>
