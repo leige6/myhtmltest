@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)http://www.jq22.com/demo/jQuery-dspro20160427/ -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/sinaFaceAndEffec.css">
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <title></title>
+</head>
+<body>
+    <div id="content">
+        <div class="wrap">
+            <div class="comment">
+                <div class="head-face">
+                    <img src="images/1.jpg">
+                    <p>我是鸟</p>
+                </div>
+                <div class="content">
+                    <div class="cont-box">
+                        <textarea class="text" placeholder="请输入..."></textarea>
+                    </div>
+                    <div class="tools-box">
+                        <div class="operator-box-btn"><span class="face-icon">☺</span></div>
+                        <div class="submit-btn"><input type="button" onclick="comment()" value="发表评论"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="info-show">
+                <ul>
+                    <li>
+                        <div class="head-face"><img src="images/1.jpg"></div>
+                        <div class="reply-cont">
+                            <p class="username">小小红色飞机</p>
+                            <p class="comment-body">
+                                <img src="http://img.t.sinajs.cn/t4/appstyle/expression/ext/normal/3c/pcmoren_wu_thumb.png"
+                                     height="22" width="22">
+                            </p>
+                            <p class="comment-footer">2016年10月5日　回复　点赞54　转发12</p>
+                        </div>
+                    </li>
+                    <li >
+                        <div class="head-face"><img src="images/1.jpg"></div>
+                        <div class="reply-cont">
+                            <p class="username">小小红色飞机</p>
+                            <p class="comment-body"><img
+                                    src="http://img.t.sinajs.cn/t4/appstyle/expression/ext/normal/3c/pcmoren_wu_thumb.png"
+                                    height="22" width="22"></p>
+                            <p class="comment-footer">2016年10月5日　回复　点赞54　转发12</p></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/sinaFaceAndEffec.js"></script>
+<script type="text/javascript">
+    // 绑定表情
+    $('.face-icon').SinaEmotion($('.text'));
+    // 测试本地解析
+    function comment() {
+        var inputText = $('.text').val();
+        inputText=AnalyticEmotion(inputText);
+        var html = '<li>';
+        html += '<div class="head-face">';
+        html += '<img src="images/1.jpg" / >';
+        html += '</div>';
+        html += '<div class="reply-cont">';
+        html += '<p class="username">小小红色飞机</p>';
+        html += '<p class="comment-body">' + inputText + '</p>';
+        html += '<p class="comment-footer">2016年10月5日　<a href="javascript:void(0);" onclick="replyClick(this)">回复</a>　点赞54　转发12</p>';
+        html += '</div>';
+        html += '</li>';
+        $('#info-show ul').append(html);
+    }
+
+    function outReply(_this) {
+        var content=$("#comment_reply").find('.text').val();
+        content=AnalyticEmotion(content);
+        var html = '<li class="reply">';
+        html += '<div class="head-face">';
+        html += '<img src="images/1.jpg" / >';
+        html += '</div>';
+        html += '<div class="reply-cont">';
+        html += '<p class="username">小小红色飞机</p>';
+        html += '<p class="comment-body">' + content + '</p>';
+        html += '<p class="comment-footer">2016年10月5日　<a href="javascript:void(0);"  onclick="replyClick(this)">回复</a>　点赞54　转发12</p>';
+        html += '</div>';
+        html += '</li>';
+        $("#comment_reply").parent().parent().after(html);
+        $("#comment_reply").remove();
+    }
+
+    function replyClick(_this) {
+        $("#comment_reply").remove();
+        var html = '<div class="comment" id="comment_reply">';
+        html += '<div class="head-face">';
+        html += '<img src="images/1.jpg">';
+        html += '<p>我是鸟</p>';
+        html += '</div>';
+        html += '<div class="content">';
+        html += '<div class="cont-box">';
+        html += '<textarea class="text" placeholder="请输入..."></textarea>';
+        html += '</div>';
+        html += '<div class="tools-box">';
+        html += '<div class="operator-box-btn"><span class="face-icon">☺</span></div>';
+        html += '<div class="submit-btn"><input type="button" onclick="outReply(this)" value="发表回复"></div>';
+        html += '</div>';
+        html += '</div>';
+        html += '</div>';
+        $(_this).parent().parent().append(html);
+        //alert($(_this).parent().parent().children().find('.text'));
+        $("#comment_reply").children().find('.face-icon').SinaEmotion($("#comment_reply").children().find('.text'));
+    }
+
+</script>
+</html>
