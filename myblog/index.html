@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width,
+                                     initial-scale=1.0,
+                                     maximum-scale=1.0,
+                                     user-scalable=no">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>bootstrap 练习</title>
+    <!-- 引入 Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+        /*  .nav-menu{
+              background-color: #563d7c;
+          }*/
+        body, input, button, select, textarea, h1, h2, h3, h4, h5, h6 {
+            font-family: 'Helvetica Neue', STHeiti, 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background: url(images/bg.gif) repeat !important;
+        }
+
+        a {
+            cursor: pointer;
+            color: #155faa;
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: #499ef3;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            margin-top: 0;
+            font-size: 100%;
+            line-height: 1.7;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                width: 900px;
+                padding-right: 15px;
+                padding-left: 15px;
+            }
+        }
+
+        .navbar {
+            background-color: #563d7c;
+            border: none;
+        }
+
+        .navbar-nav > li > a {
+            color: #fff;
+            font-size: 16px;
+        }
+
+        .navbar-nav > li > a:hover {
+            background-color: #6E4E9E;
+        }
+
+        @media (min-width: 900px) {
+            .navbar .nav-logo {
+                background-color: #fff;
+                color: #563d7c;
+                height: 40px;
+                border-radius: 7px;
+                line-height: 10px;
+                font-size: 20px;
+                margin-top: 5px;
+            }
+
+            .navbar .navbar-toggle {
+                background-color: #fff;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar .nav-logo {
+                color: #fff;
+            }
+        }
+
+        .navbar input[type="text"] {
+            background-color: #313131;
+            border: none;
+            color: #999;
+        }
+
+        .navbar .navbar-form {
+            position: relative;
+        }
+
+        .navbar button[type="submit"] {
+            position: absolute;
+            top: 30%;
+            right: 20px;
+            background: none;
+            border: none;
+        }
+
+        .navbar .glyphicon-search {
+            color: #999;
+        }
+
+        .collapse .navbar-right {
+            margin-left: 10px;
+        }
+
+        .blog-list {
+            margin-top: 30px;
+        }
+
+        .blog-list .container {
+            background-color: #fff;
+            border: 1px solid #e6e6e6;
+            border-radius: 4px;
+        }
+
+        .blog-list-nav {
+            width: 100%;
+            position: relative;
+            min-height: 63px;
+            margin: 0;
+            padding: 30px 20px 0;
+            border-color: #e6e6e6;
+        }
+
+        .blog-list-nav > li {
+            float: right;
+            margin: 0 4px 0 0;
+            font-size: 14px;
+            border: none;
+        }
+
+        .blog-list-nav > li > a {
+            color: #666;
+            line-height: 30px;
+            padding: 0 13px;
+            background-color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .blog-content-list {
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+        }
+
+        .blog-list-item {
+            position: relative;
+            z-index: 0;
+            min-height: 45px;
+            padding: 18px 0 14px 50px;
+            border-top: 1px solid #F5F5F5;
+        }
+
+        .blog-list-item > .blog-user-name {
+            position: absolute;
+            left: 0;
+            top: 18px;
+            font-size: 12px;
+            line-height: 20px;
+            font-weight: 400;
+        }
+
+        .blog-list-item .blog-user-name > img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .blog-list-item .blog-item-content > h4 {
+            margin: 0 0 3px;
+            padding-right: 20px;
+            font-size: 14px;
+            word-wrap: break-word;
+        }
+
+        .markitup-box {
+            line-height: 180%;
+            word-wrap: break-word !important;
+            max-height: 130px;
+            overflow: hidden;
+        }
+
+        .blog-footer {
+            color: #777;
+            padding: 30px 0;
+            border-top: 1px solid #e5e5e5;
+            margin-top: 70px;
+        }
+
+        .blog-footer .footer-top p {
+            line-height: 30px;
+        }
+
+        .blog-footer .footer-top .about > div {
+            height: 110px;
+            margin-bottom: 10px;
+        }
+
+        .footer-top .about > div h4 {
+            color: #563d7c;
+            font-size: 16px;
+        }
+
+        .footer-top .about > div li {
+            margin-top: 7px;
+
+        }
+
+        .blog-footer a {
+            color: #777;
+        }
+
+        .blog-footer .footer-bottom {
+            font-size: 13px;
+            padding-top: 20px;
+            margin-top: 20px;
+            border-top: 1px solid #e7e7e7;
+        }
+
+        .blog-footer .footer-bottom ul > li + li:before {
+            padding: 0 10px;
+            color: #ccc;
+            content: "|";
+        }
+
+        .myinfo {
+            width: 48px;
+            position: fixed;
+            right: 20px;
+            bottom: 50%;
+            z-index: 555;
+        }
+
+        .myinfo .weqq {
+            margin-top: 10px;
+            display: block;
+            width: 46px;
+            height: 46px;
+            background: url("images/qq.png") no-repeat center center;
+            background-size: contain;
+        }
+
+        .myinfo .weqq:hover {
+            display: block;
+            width: 46px;
+            height: 46px;
+            background: url("images/qqh.png") no-repeat center center;
+            background-size: contain;
+        }
+
+        .myinfo .myWechat {
+            display: block;
+            width: 48px;
+            height: 48px;
+            background: url("images/wchat.png") no-repeat center center;
+            background-size: cover;
+        }
+
+        .myinfo .myWechat:hover {
+            background: url("images/wchath.png") no-repeat center center;
+        }
+
+        .w_transition {
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        }
+
+    </style>
+</head>
+<body>
+<nav class="navbar">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle btn-lg" data-toggle="collapse" data-target="#responsive-navbar">
+                <span class="glyphicon glyphicon-list "></span>
+            </button>
+            <a href="#" class="nav-logo navbar-brand">lolabc<strong>.cn</strong></a>
+        </div>
+        <div class="collapse navbar-collapse" id="responsive-navbar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="">导航1</a></li>
+                <li><a href="">导航2</a></li>
+                <li><a href="">导航3</a></li>
+            </ul>
+            <!--<form action="#" class="navbar-form navbar-left">
+                <input type="text" placeholder="搜索" class="form-control">
+                <button type="submit"><span class="glyphicon glyphicon-search"></span></button>
+            </form>-->
+            <a class="register btn btn-sm btn-success navbar-btn navbar-right"
+               href="http://wenda.bootcss.com/account/register/">注册</a>
+            <a class="login btn btn-sm btn-primary  navbar-btn navbar-right"
+               href="http://wenda.bootcss.com/login/">登录</a>
+            <!-- <p class="navbar-text navbar-right">您好,<a href="#" class="navbar-link">小明</a></p>-->
+        </div>
+    </div>
+</nav>
+<div class="blog-list">
+    <div class="container">
+        <ul id="blog-list-tab" class="nav nav-tabs blog-list-nav">
+            <li><a href="#recom" data-toggle="tab">推荐</a></li>
+            <li><a href="#jhot" data-toggle="tab">热门</a></li>
+            <li><a href="#new" data-toggle="tab">最新</a></li>
+        </ul>
+        <div id="blog-tab-content" class="tab-content">
+            <div class="tab-pane fade in active" id="new">
+                <div class="blog-content-list">
+                    <div class="blog-list-item">
+                        <a class="blog-user-name hidden-xs" data-id="4045" href="#" rel="nofollow"><img
+                                src="images/avatar-max-img.png" alt=""/></a>
+                        <div class="blog-item-content">
+                            <h4><a href="#">bootstrap3自定义响应式要支持ie8</a></h4>
+                            <p>
+                                <a href="#" class="blog-user-name">Helper</a> <span class="text-color-999">发表了文章 • 0 个评论 • 802 次浏览 • 2017-09-21 16:34</span>
+                            </p>
+                            <div class="markitup-box">
+                                <div class="img pull-right" style="display: none;"></div>
+                                前不久呢，景安出了一个云服务器试用的活动，配置有两种，一种是4核CPU，4G内存，5M带宽的云服务器，1元30天，但是限制是企业用户，谁要是能搞到营业执照就去弄一个。<br>
+                                <br>
+                                还有一种，1核CPU，1G内存，1M带宽的VPS，也是1元30天，是个人用户的，测试一些小...
+                            </div>
+                            <a class="more" href="http://wenda.bootcss.com/article/3">查看更多</a>
+                        </div>
+                    </div>
+                    <div class="blog-list-item">
+                        <a class="blog-user-name hidden-xs" data-id="4045" href="#" rel="nofollow"><img
+                                src="images/avatar-max-img.png" alt=""/></a>
+                        <div class="blog-item-content">
+                            <h4><a href="#">bootstrap3自定义响应式要支持ie8</a></h4>
+                            <p>
+                                <a href="#" class="blog-user-name">Helper</a> <span class="text-color-999">发表了文章 • 0 个评论 • 802 次浏览 • 2017-09-21 16:34</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="blog-list-item">
+                        <a class="blog-user-name hidden-xs" data-id="4045" href="#" rel="nofollow"><img
+                                src="images/avatar-max-img.png" alt=""/></a>
+                        <div class="blog-item-content">
+                            <h4><a href="#">bootstrap3自定义响应式要支持ie8</a></h4>
+                            <p>
+                                <a href="#" class="blog-user-name">Helper</a> <span class="text-color-999">发表了文章 • 0 个评论 • 802 次浏览 • 2017-09-21 16:34</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="blog-list-item">
+                        <a class="blog-user-name hidden-xs" data-id="4045" href="#" rel="nofollow"><img
+                                src="images/avatar-max-img.png" alt=""/></a>
+                        <div class="blog-item-content">
+                            <h4><a href="#">bootstrap3自定义响应式要支持ie8</a></h4>
+                            <p>
+                                <a href="#" class="blog-user-name">Helper</a> <span class="text-color-999">发表了文章 • 0 个评论 • 802 次浏览 • 2017-09-21 16:34</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="blog-list-item">
+                        <a class="blog-user-name hidden-xs" data-id="4045" href="#" rel="nofollow"><img
+                                src="images/avatar-max-img.png" alt=""/></a>
+                        <div class="blog-item-content">
+                            <h4><a href="#">bootstrap3自定义响应式要支持ie8</a></h4>
+                            <p>
+                                <a href="#" class="blog-user-name">Helper</a> <span class="text-color-999">发表了文章 • 0 个评论 • 802 次浏览 • 2017-09-21 16:34</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-content-footer">
+                    <ul class="pagination pull-right">
+                        <li>
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="recom">
+
+            </div>
+            <div class="tab-pane fade" id="jhot">
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="blog-footer">
+    <div class="container">
+        <div class="row footer-top">
+            <div class="col-sm-6 col-lg-6">
+                <h4>
+                    <img src="http://wenda.bootcss.com/static/css/default/logo/logo.png">
+                </h4>
+                <p>本网站所列开源项目的中文版文档全部由<a href="http://www.bootcss.com/" target="_blank">Bootstrap中文网</a>成员翻译整理，并全部遵循 <a
+                        href="http://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>协议发布。</p>
+            </div>
+            <div class="col-sm-6 col-lg-5 col-lg-offset-1">
+                <div class="row about">
+                    <div class="col-xs-4">
+                        <h4>关于</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="http://www.bootcss.com/about/" target="_blank">关于我们</a></li>
+                            <li><a href="http://www.bootcss.com/ad/" target="_blank">广告合作</a></li>
+                            <li><a href="http://www.bootcss.com/links/" target="_blank">友情链接</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-4">
+                        <h4>联系方式</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="http://weibo.com/bootcss" title="Bootstrap中文网官方微博" target="_blank">新浪微博</a>
+                            </li>
+                            <li><a href="mailto:admin@bootcss.com">电子邮件</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-4">
+                        <h4>旗下网站</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="http://www.golaravel.com/" target="_blank">Laravel中文网</a></li>
+                            <li><a href="http://www.ghostchina.com/" target="_blank">Ghost中国</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row footer-bottom">
+            <ul class="list-inline text-center">
+                <li><a href="http://www.miibeian.gov.cn/" target="_blank">京ICP备11008151号</a></li>
+                <li>京公网安备11010802014853</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="myinfo hidden-xs">
+    <ul class="list-unstyled">
+        <li>
+            <a class="myWechat" href="#" id="wechat-popover" data-toggle="pophover"
+               data-placement="left">
+            </a>
+        </li>
+        <li>
+            <a class="weqq" href="#" id="weqq-popover" data-toggle="pophover"
+               data-placement="left">
+            </a>
+        </li>
+
+    </ul>
+</div>
+</body>
+<!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<!-- 包括所有已编译的插件 -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+        $('#weqq-popover').popover({
+            trigger: 'hover',//鼠标以上时触发弹出提示框
+            html: true,//开启html 为true的话，data-content里就能放html代码了
+            content: '<ul class="list-unstyled"><li><img src="images/qqqrcode.png"></li><li style="text-align: center; font-size: 10px; color:#777 ">扫描添加我<br/>的qq</li></ul>'
+        });
+        $('#wechat-popover').popover({
+            trigger: 'hover',//鼠标以上时触发弹出提示框
+            html: true,//开启html 为true的话，data-content里就能放html代码了
+            content: '<ul class="list-unstyled"><li><img src="images/myqrcode.png"></li><li style="text-align: center; font-size: 10px; color:#777 ">扫描关注我<br/>的微信</li></ul>'
+        });
+    })
+</script>
+</html>
