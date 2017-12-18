@@ -15,6 +15,11 @@ a:hover {
     text-decoration: none;
     color: #499ef3;
 }
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
 
 h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
@@ -176,4 +181,8 @@ h1, h2, h3, h4, h5, h6 {
     -o-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+}
+
+.markitup-box p {
+    padding: 5px;
 }
