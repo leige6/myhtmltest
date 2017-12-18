@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+      *{margin: 0; padding: 0}
+		ul,ol{list-style: none}
+      .box{
+		  margin: 100px auto;
+          height: 170px;
+		  width: 490px;
+		  padding: 5px;
+		  border: 1px solid #ccc;
+		  position: relative;
+
+	  }
+	  .box .slider{
+		  width: 100%;
+		  height: 100%;
+		  background-color: pink;
+		  position: relative;
+		  overflow: hidden;
+	  }
+	  .box ul{
+		  width: 1000%;
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+	  }
+		.box ul li{
+			float: left;
+		}
+        .box ol{
+			position: absolute;
+			left: 50%;
+			bottom: 10px;
+			margin-left: -50px;
+		}
+		ol li{
+			float: left;
+			height: 18px;
+            width: 18px;
+			background-color: #fff;
+			margin-right: 10px;
+			text-align: center;
+			cursor: pointer;
+		}
+		ol li.current{
+			background-color: #FF7E00;
+		}
+	</style>
+	<script type="application/javascript">
+        //  封装匀速运动
+        function animate(obj,target){
+            clearInterval(obj.timer);  // 先清除定时器
+            var speed = obj.offsetLeft < target ? 15 : -15;  // 用来判断 应该 +  还是 -
+            obj.timer = setInterval(function() {
+                var result = target - obj.offsetLeft; // 因为他们的差值不会超过5
+                obj.style.left = obj.offsetLeft + speed + "px";
+                if(Math.abs(result)<=15)  // 如果差值不小于 5 说明到位置了
+                {
+                    clearInterval(obj.timer);
+                    obj.style.left = target + "px";  // 有5像素差距   我们直接跳转目标位置
+                }
+            },10)
+        }
+
+     window.onload=function () {
+         var key=0 ; //控制图片定时滚动
+         var square=0;//控制小方块颜色
+         var box=document.getElementById("box");
+         var ul=box.children[0].children[0];
+         //对元素进行操作
+		 ul.appendChild(ul.children[0].cloneNode(true));
+		 var ol=document.createElement("ol");
+         box.appendChild(ol);
+		 for(var i=0;i<ul.children.length-1;i++){
+		     var li=document.createElement("li");
+		     li.innerHTML=i+1;
+		     li.index=i;
+		     li.onmouseover=function () {
+				for(var j=0;j<ol.children.length;j++){
+                    ol.children[j].className=""
+				}
+				this.className="current";
+                 animate(ul,-this.index*490);//调用动画函数
+                 key=square=this.index;
+             };
+		     ol.appendChild(li)
+		 }
+         ol.children[0].className="current";
+		 //添加轮播图定时器
+         var timer=null;
+
+		 timer=setInterval(autoplay,2000);//设定定时器
+		 var ulsLen=ul.children.length;
+		 var olsLen=ol.children.length;
+		 function autoplay() {
+           key++;
+           if(key>ulsLen-1){
+               key=1
+			   ul.style.left=0;
+		   }
+		   animate(ul,-key*490);//调用动画函数
+             square++;
+             if(square>olsLen-1){
+                 square=0
+			 }
+             for(var j=0;j<olsLen;j++){
+                 ol.children[j].className=""
+             }
+             ol.children[square].className="current";
+         }
+         
+         box.onmouseover=function () {
+			 clearInterval(timer);
+         }
+         box.onmouseout=function () {
+             timer=setInterval(autoplay,2000);//设定定时器
+         }
+     }
+	</script>
+</head>
+<body>
+<div class="box" id="box">
+	<div class="slider">
+		<ul>
+					<li><img src="images/01.jpg" alt=""></li>
+					<li><img src="images/02.jpg" alt=""></li>
+					<li><img src="images/03.jpg" alt=""></li>
+					<li><img src="images/04.jpg" alt=""></li>
+					<li><img src="images/05.jpg" alt=""></li>
+		</ul>
+	</div>
+		<!--<ol>
+			<li class="current">1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ol>-->
+
+</div>
+</body>
+</html>

@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+ul, ol {
+    list-style: none
+}
+
+.box {
+    margin: 100px auto;
+    height: auto;
+    width: 870px;
+    position: relative;
+    border-bottom: 1px solid #ccc;
+}
+
+.box .up {
+    position: relative;
+    width: 100%;
+    min-height: 120px;
+    border: 1px solid #ccc;
+}
+
+.box .title {
+    width: 98.5%;
+    height: 31px;
+    border: 1px solid #ccc;
+    line-height: 31px;
+    clolor: #555555;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: '宋体';
+    padding-left: 13px;
+    border-bottom: 0px;
+}
+
+.up .left {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    display: inline-block;
+    width: 8.1%;
+    height: 100%;
+}
+
+.up img {
+    width: 50px;
+    height: 50px;
+}
+
+.box .up .right {
+    margin-left: 8.1%;
+    display: inline-block;
+    width: 91%;
+    height: 100%;
+}
+
+.up .right .username {
+    line-height: 42px;
+    font-size: 14px;
+    color: #DD3322;
+    font-weight: bold;
+}
+
+.up .right .content {
+    line-height: 14px;
+    font-size: 14px;
+    color: #4F4F4F;
+    /*添加这两个属性是为了让div中文字自动换行*/
+    word-break:break-all;
+    overflow:hidden;
+}
+
+.up .right .info {
+    line-height: 40px;
+    font-size: 14px;
+    color: #cccccc;
+}
+
+.up .right a {
+    color: #cccccc;
+    text-decoration: none;
+    padding-left: 15px;
+}
+
+.up .right a:hover {
+    color: #4F4F4F;
+}
+
+.up .right span.reply {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("../images/reply.png") no-repeat 0 3px;
+}
+
+.up .right a:hover > span.reply {
+    background: url("../images/replyo.png") no-repeat 0 3px;
+}
+
+.up .right span.like {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("../images/like.png") no-repeat 0 3px;
+}
+
+.up .right a:hover > span.like {
+    background: url("../images/likeo.png") no-repeat 0 3px;
+}
+
+.comment {
+    margin-top: 50px;
+    width: 100%;
+    height: 158px;
+    position: relative;
+}
+
+.comment .left {
+    float: left;
+    width: 6.85%;
+    height: 158px;
+}
+
+.comment .left img {
+    width: 50px;
+    height: 50px;
+}
+
+.comment .right {
+    float: left;
+    width: 92.5%;
+    height: 106px;
+    border: 1px solid #ccc;
+}
+
+.comment .header {
+    width: 100%;
+    height: 75px;
+    border-bottom: 1px solid #ccc;
+}
+
+.comment .header textarea {
+    width: 97.5%;
+    height: 100%;
+    background-color: #FFFFFF;
+    border: 0px;
+    resize: none;
+    font-size: 14px;
+    color: #555555;
+    font-weight: bold;
+    line-height: 31px;
+    padding-left: 10px;
+    padding-right: 10px;
+    outline: none;
+}
+
+textarea::-webkit-input-placeholder {
+    color: #555555;
+    font-size: 14px;
+    line-height: 31px;
+    font-weight: bold;
+}
+
+.comment .bottom {
+    width: 100%;
+    height: 30px;
+}
+
+.comment .bleft {
+    float: left;
+    width: 87%;
+    height: 30px;
+    border-right: 1px solid #ccc;
+    position: relative;
+}
+
+.comment .bleft a {
+    display: block;
+    width: 10%;
+    height: 30px;
+}
+
+.comment .face {
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    left: 10px;
+    top: 3px;
+}
+
+.comment .face:hover {
+    content: url("../images/faceo.png");
+}
+
+.comment input {
+    float: left;
+    width: 12.87%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #555;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: #e6e6e6;
+}
+
+.comment input:hover {
+    background-color: #cccccc;
+}
+
+.comment .total {
+    position: absolute;
+    bottom: 10px;
+    width: 65px;
+    height: 22px;
+    border: 1px solid #ccc;
+    background-color: #F6F6F6;
+    line-height: 22px;
+    text-align: center;
+    font-size: 14px;
+    color: #4F4F4F;
+}
+
+.comment .total span {
+    color: red;
+}
+
+.box .show {
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+}
+
+.box .rp {
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+    margin-left: 40px;
+    width: 95%;
+}
+
+.box .rp img {
+    width: 35px;
+    height: 35px;
+}
+
+.box .rp .right {
+    margin-left: 7%;
+}
+
+.up .repl {
+    position: relative;
+    width: 100%;
+    min-height: 120px;
+    margin-top: 0px;
+}
+
+.up .repl .right{
+    border: 0px;
+}
+.up .repl .header{
+    border: 1px solid #ccc;
+}
+.up .repl textarea{
+    width: 97.3%;
+}
+.up .repl .bottom{
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.up .repl  input{
+    width: 12.86%;
+}

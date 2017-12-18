@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)http://www.jq22.com/demo/jQuery-dspro20160427/ -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/sinaFaceAndEffec.css">
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/sinaFaceAndEffec.js"></script>
+    <title></title>
+</head>
+<body>
+<div class="box">
+    <div class="title">被顶起来的评论</div>
+    <div class="up">
+        <span class="left"><img src="//qzapp.qlogo.cn/qzapp/101263695/10BD489E6C7EFE25C644E4FFAB6C4FC3/100"
+                                alt="YourUncle"></span>
+        <span class="right">
+            <ul>
+                <li class="username">Your uncle</li>
+                <li class="content">这个评论怎么样！</li>
+                <li class="info">6月29日	  <a href="javascript:void(0)"><span class="reply"></span> 回复</a>  <a
+                        href="#"><span
+                        class="like"></span> 顶(3)</a></li>
+            </ul>
+        </span>
+    </div>
+    <div class="comment">
+        <div class="left"><img src="images/default_avatar_50.gif"></div>
+        <div class="right">
+            <div class="header">
+                <textarea class="text" placeholder="说点什么吧..."></textarea>
+            </div>
+            <div class="bottom">
+                <div class="bleft"><a href="javascript:void(0)" class="face-icon"><img class="face"
+                                                                                       src="images/face.png"></a></div>
+                <input type="button" onclick="comment()" value="发表评论">
+            </div>
+        </div>
+        <div class="total"><span>6</span>条评论</div>
+    </div>
+    <div class="up show">
+        <span class="left"><img src="//qzapp.qlogo.cn/qzapp/101263695/10BD489E6C7EFE25C644E4FFAB6C4FC3/100"
+                                alt="YourUncle"></span>
+        <span class="right">
+            <ul>
+                <li class="username">Your uncle</li>
+                <li class="content">这个评论怎么样！</li>
+                <li class="info">6月29日	  <a href="javascript:void(0)" onclick="replyClick(this)"><span
+                        class="reply"></span> 回复</a>  <a
+                        href="#"><span
+                        class="like"></span> 顶(3)</a>
+                     <!--<div id="comment_reply" class="repl comment">
+                         <div class="left"><img src="//qzapp.qlogo.cn/qzapp/101263695/10BD489E6C7EFE25C644E4FFAB6C4FC3/100"></div>
+                          <div class="right">
+                              <div class="header">
+                                 <textarea class="text" placeholder="说点什么吧..."></textarea>
+                              </div>
+                               <div class="bottom">
+                                <div class="bleft"><a href="javascript:void(0)" class="face-icon"><img class="face"
+                                                                                       src="images/face.png"></a></div>
+                                  <input type="button" onclick="comment()" value="回复">
+                                </div>
+                          </div>
+                     </div>-->
+                </li>
+            </ul>
+        </span>
+    </div>
+    <div class="up rp">
+        <span class="left"><img src="//qzapp.qlogo.cn/qzapp/101263695/10BD489E6C7EFE25C644E4FFAB6C4FC3/100"
+                                alt="YourUncle"></span>
+        <span class="right">
+            <ul>
+                <li class="username">Your uncle</li>
+                <li class="content">这个评论怎么样！</li>
+                <li class="info">6月29日	  <a href="javascript:void(0)"><span class="reply"></span> 回复</a>  <a
+                        href="#"><span
+                        class="like"></span> 顶(3)</a></li>
+            </ul>
+        </span>
+    </div>
+    <div class="up show">
+        <span class="left"><img src="//qzapp.qlogo.cn/qzapp/101263695/10BD489E6C7EFE25C644E4FFAB6C4FC3/100"
+                                alt="YourUncle"></span>
+        <span class="right">
+            <ul>
+                <li class="username">Your uncle</li>
+                <li class="content">这个评论怎么样！</li>
+                <li class="info">6月29日	  <a href="javascript:void(0)"><span class="reply"></span> 回复</a>  <a
+                        href="#"><span
+                        class="like"></span> 顶(3)</a></li>
+            </ul>
+        </span>
+    </div>
+    <div class="up show">
+        <span class="left"><img src="//qzapp.qlogo.cn/qzapp/101263695/10BD489E6C7EFE25C644E4FFAB6C4FC3/100"
+                                alt="YourUncle"></span>
+        <span class="right">
+            <ul>
+                <li class="username">Your uncle</li>
+                <li class="content">这个评论怎么样！</li>
+                <li class="info">6月29日	  <a href="javascript:void(0)"><span class="reply"></span> 回复</a>  <a
+                        href="#"><span
+                        class="like"></span> 顶(3)</a></li>
+            </ul>
+        </span>
+    </div>
+    <div class="up show">
+        <span class="left"><img src="//qzapp.qlogo.cn/qzapp/101263695/10BD489E6C7EFE25C644E4FFAB6C4FC3/100"
+                                alt="YourUncle"></span>
+        <span class="right">
+            <ul>
+                <li class="username">Your uncle</li>
+                <li class="content">这个评论怎么样！</li>
+                <li class="info">6月29日	  <a href="javascript:void(0)"><span class="reply"></span> 回复</a>  <a
+                        href="#"><span
+                        class="like"></span> 顶(3)</a></li>
+            </ul>
+        </span>
+    </div>
+    <div class="up show">
+        <span class="left"><img src="//qzapp.qlogo.cn/qzapp/101263695/10BD489E6C7EFE25C644E4FFAB6C4FC3/100"
+                                alt="YourUncle"></span>
+        <span class="right">
+            <ul>
+                <li class="username">Your uncle</li>
+                <li class="content">这个评论怎么样！</li>
+                <li class="info">6月29日	  <a href="javascript:void(0)"><span class="reply"></span> 回复</a>  <a
+                        href="#"><span
+                        class="like"></span> 顶(3)</a></li>
+            </ul>
+        </span>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    // 绑定表情
+    $('.face-icon').SinaEmotion($('.text'));
+    function replyClick(_this) {
+        $("#comment_reply").remove();
+        var html =' <div id="comment_reply" class="repl comment">' +
+            '<div class="left"><img src="//qzapp.qlogo.cn/qzapp/101263695/10BD489E6C7EFE25C644E4FFAB6C4FC3/100"></div>' +
+            '<div class="right"> ' +
+            '<div class="header"> ' +
+            '<textarea class="text" placeholder="说点什么吧..."></textarea> ' +
+            '</div> ' +
+            '<div class="bottom"> ' +
+            '<div class="bleft"><a href="javascript:void(0)" class="face-icon"><img class="face"src="images/face.png"></a></div> ' +
+            '<input type="button" onclick="comment()" value="回复"> ' +
+            '</div>' +
+            '</div> ' +
+            '</div>';
+        $(_this).parent().append(html);
+        //alert($(_this).parent().parent().children().find('.text'));
+        $("#comment_reply").children().find('.face-icon').SinaEmotion($("#comment_reply").children().find('.text'));
+    }
+</script>
+</html>
