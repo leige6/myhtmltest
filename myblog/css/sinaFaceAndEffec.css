@@ -10,21 +10,7 @@
 	position: absolute;
 	border: 1px solid #E8E8E8;
 }
-@media (max-width: 768px) {
 
-	#emotions{
-		left:0;
-		margin-top: 50px;
-		width: 180px;
-		font-size:12px;
-		background:#fff;
-		border-radius: 5px;
-		box-shadow: 0 0 8px gray;
-		padding: 10px 0;
-		position: absolute;
-		border: 1px solid #E8E8E8;
-	}
-}
 #emotions a{
 	color: #9ABBC8;
 	padding:2px 7px;
@@ -102,4 +88,29 @@
 }
 #emotions .page a:hover{
 	background-color:#e7e7e7;
+}
+@media (max-width: 768px) {
+
+	#emotions{
+		left:0;
+		margin-top: 50px;
+		width: 220px;
+		font-size:12px;
+		background:#fff;
+		border-radius: 5px;
+		box-shadow: 0 0 8px gray;
+		padding: 10px 0;
+		position: absolute;
+		border: 1px solid #E8E8E8;
+	}
+	#emotions a{
+		color: #9ABBC8;
+		padding:2px 1px;
+		text-decoration:none;
+	}
+	#emotions .categorys a{
+		border: 1px solid #e8e8e8;
+		border-right:none;
+		display: inline-block;
+	}
 }
