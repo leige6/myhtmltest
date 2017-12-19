@@ -1,6 +1,6 @@
 #emotions{
 	left:0;
-	margin-top: 20px;
+	margin-top: 50px;
 	width: 395px;
 	font-size:12px;
 	background:#fff;
@@ -9,6 +9,21 @@
 	padding: 10px 0;
 	position: absolute;
 	border: 1px solid #E8E8E8;
+}
+@media (max-width: 768px) {
+
+	#emotions{
+		left:0;
+		margin-top: 50px;
+		width: 200px;
+		font-size:12px;
+		background:#fff;
+		border-radius: 5px;
+		box-shadow: 0 0 8px gray;
+		padding: 10px 0;
+		position: absolute;
+		border: 1px solid #E8E8E8;
+	}
 }
 #emotions a{
 	color: #9ABBC8;
@@ -27,7 +42,7 @@
 #emotions #next
 {
 	margin-left:3px;
-	height: 15px;
+	height: 20px;
 	display: block;
 	float: left;
 	background:#eee;
@@ -57,14 +72,14 @@
 	overflow: hidden;
 	overflow-y:auto;
 	max-height:180px;
-	width: 100%;
+	width: 95%;
 }
 #emotions .container a{
 	float:left;
 	width:26px;
 	height:22px;
 	text-align:center;
-	padding: 4px 2px;
+	padding: 0px 0px;
 	margin: -1px 0 0 -1px;
 	border: 1px solid #e8e8e8;
 }
