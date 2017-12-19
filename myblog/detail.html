@@ -232,6 +232,7 @@
             background: #fff;
             border: 1px solid #E2E2E2;
             border-radius: 5px;
+            box-shadow: 0 0 8px grey;
         }
 
         .aw-comment-list {
@@ -338,6 +339,21 @@
             background-size:contain;
             background-position: center center;
         }
+        @media (max-width: 768px) {
+            .aw-comment-box-btn .pull-left{
+                display: inline-block;
+                margin-left: 5px;
+                width: 20px;
+                height: 20px;
+                background-image: url("images/face.png");
+                background-size:contain;
+                background-position: center center;
+            }
+            .aw-comment-box-btn .pull-right>a{
+            /* 小按钮*/   padding: 1px 5px;  font-size: 12px;  line-height: 1.5;
+                border-radius: 3px;
+            }
+        }
         .aw-comment-box-btn .pull-left:hover{
             background-image: url("images/faceo.png");
         }
@@ -425,7 +441,7 @@
                 <div class="aw-comment-box-btn" style="display: block;">
                     <a href="javascript:void(0)" class="face-icon pull-left" ></a>
                     <span class="pull-right">
-                        <a href="javascript:;" class="btn btn-success" onclick="save_comment(this);">
+                        <a href="javascript:;" class="btn btn-success btn-sm" onclick="save_comment(this);">
                             发表评论
                         </a>
                     </span>
@@ -587,6 +603,7 @@
             '<p class="aw-comment-txt-info">评论请先<a href="#">登录</a>或<a href="#">注册</a></p> ' +
             '</div> ' +
             '<div class="aw-comment-box-btn" style="display: block;"> ' +
+            ' <a href="javascript:void(0)" class="face-icon pull-left" ></a>'+
             '<span class="pull-right"> ' +
             '<a href="javascript:;" class="btn btn-mini btn-success" onclick="save_comment(this);">发表 </a> ' +
             '<a href="javascript:;" class="btn btn-mini btn-default close-comment-box" onclick="closeReply()">取消</a>' +
@@ -594,6 +611,7 @@
             '</div> ' +
             '</div>';
         $(_this).parent().parent().parent().append(html);
+        $('#comment_reply').children().find('.face-icon').SinaEmotion($("#comment_reply").children().find('.aw-comment-txt'));
     }
     function  closeReply() {
         $("#comment_reply").css("display","none");
