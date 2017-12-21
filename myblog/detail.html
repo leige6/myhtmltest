@@ -574,13 +574,11 @@
 <div class="myinfo hidden-xs hidden-sm">
     <ul class="list-unstyled">
         <li>
-            <a class="myWechat w_transition" href="#" id="wechat-popover" data-toggle="pophover"
-               data-placement="left">
+            <a class="myWechat w_transition" href="#" id="wechat-popover">
             </a>
         </li>
         <li>
-            <a class="weqq" href="#" id="weqq-popover" data-toggle="pophover"
-               data-placement="left">
+            <a class="weqq" href="#" id="weqq-popover">
             </a>
         </li>
 
@@ -621,11 +619,13 @@
         $('.face-icon').SinaEmotion($('.aw-comment-txt'));
 
         $('#weqq-popover').popover({
+            placement : 'left',
             trigger: 'hover',//鼠标以上时触发弹出提示框
             html: true,//开启html 为true的话，data-content里就能放html代码了
             content: '<ul class="list-unstyled"><li><img src="images/qqqrcode.png"></li><li style="text-align: center; font-size: 10px; color:#777 ">扫描添加我<br/>的qq</li></ul>'
         });
         $('#wechat-popover').popover({
+            placement : 'left',
             trigger: 'hover',//鼠标以上时触发弹出提示框
             html: true,//开启html 为true的话，data-content里就能放html代码了
             content: '<ul class="list-unstyled"><li><img src="images/myqrcode.png"></li><li style="text-align: center; font-size: 10px; color:#777 ">扫描关注我<br/>的微信</li></ul>'
