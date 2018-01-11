@@ -92,7 +92,14 @@ h1, h2, h3, h4, h5, h6 {
 .navbar .glyphicon-search {
     color: #999;
 }
-
+.navbar .bolog-logo{
+    display: block;
+    margin-top: 10px;
+    height: 33px;
+    width: 150px;
+    background: url(../images/navbar-logo.png) no-repeat!important;
+    background-size: cover
+}
 .collapse .navbar-right {
     margin-left: 10px;
 }
