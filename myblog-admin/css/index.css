@@ -1,0 +1,197 @@
+body, input, button, select, textarea, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Helvetica Neue', STHeiti, 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+}
+
+body {
+    background: url(../image/bg.gif) repeat !important;
+}
+
+a {
+    cursor: pointer;
+    color: #155faa;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #499ef3;
+}
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    font-size: 100%;
+    line-height: 1.7;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 900px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
+.navbar {
+    background-color: #563d7c;
+    border: none;
+}
+
+.navbar-nav > li > a {
+    color: #fff;
+    font-size: 16px;
+}
+
+.navbar-nav > li > a:hover {
+    background-color: #6E4E9E;
+}
+
+@media (min-width: 900px) {
+    .navbar .nav-logo {
+        background-color: #fff;
+        color: #563d7c;
+        height: 40px;
+        border-radius: 7px;
+        line-height: 10px;
+        font-size: 20px;
+        margin-top: 5px;
+    }
+
+    .navbar .navbar-toggle {
+        background-color: #fff;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar .nav-logo {
+        color: #fff;
+    }
+}
+
+.navbar input[type="text"] {
+    background-color: #313131;
+    border: none;
+    color: #999;
+}
+
+.navbar .navbar-form {
+    position: relative;
+}
+
+.navbar button[type="submit"] {
+    position: absolute;
+    top: 30%;
+    right: 20px;
+    background: none;
+    border: none;
+}
+
+.navbar .glyphicon-search {
+    color: #999;
+}
+.navbar .bolog-logo{
+    display: block;
+    margin-top: 10px;
+    height: 33px;
+    width: 150px;
+    background: url(../image/navbar-logo.png) no-repeat!important;
+    background-size: cover
+}
+.collapse .navbar-right {
+    margin-left: 10px;
+}
+.blog-footer {
+    color: #777;
+    padding: 30px 0;
+    border-top: 1px solid #e5e5e5;
+    margin-top: 70px;
+}
+
+.blog-footer .footer-top p {
+    line-height: 30px;
+}
+
+.blog-footer .footer-top .about > div {
+    height: 110px;
+    margin-bottom: 10px;
+}
+
+.footer-top .about > div h4 {
+    color: #563d7c;
+    font-size: 16px;
+}
+
+.footer-top .about > div li {
+    margin-top: 7px;
+
+}
+
+.blog-footer a {
+    color: #777;
+}
+
+.blog-footer .footer-bottom {
+    font-size: 13px;
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid #e7e7e7;
+}
+
+.blog-footer .footer-bottom ul > li + li:before {
+    padding: 0 10px;
+    color: #ccc;
+    content: "|";
+    margin-right: 10px;
+}
+
+.myinfo {
+    width: 48px;
+    position: fixed;
+    right: 20px;
+    bottom: 50%;
+    z-index: 555;
+}
+
+.myinfo .weqq {
+    margin-top: 10px;
+    display: block;
+    width: 46px;
+    height: 46px;
+    background: url("../image/qq.png") no-repeat center center;
+    background-size: contain;
+}
+
+.myinfo .weqq:hover {
+    display: block;
+    width: 46px;
+    height: 46px;
+    background: url("../image/qqh.png") no-repeat center center;
+    background-size: contain;
+}
+
+.myinfo .myWechat {
+    display: block;
+    width: 48px;
+    height: 48px;
+    background: url("../image/wchat.png") no-repeat center center;
+    background-size: cover;
+}
+
+.myinfo .myWechat:hover {
+    background: url("../image/wchath.png") no-repeat center center;
+}
+.w_transition {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.markitup-box p {
+    padding: 5px;
+}
+
