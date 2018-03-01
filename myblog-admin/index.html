@@ -12,6 +12,9 @@
             line-height: 1.1;
             color: inherit;
         }
+        *{
+            box-sizing: border-box;
+        }
         h3{
             font-size: 24px;
         }
@@ -89,10 +92,10 @@
             border-bottom: 1px solid #D0D0D0;
         }
         .main .login-main-row{
-            margin-top: 10px;
-            height: 36px;
-            width: 100%;
             padding: 0px 20px;
+            margin-top: 20px;
+            height: 36px;
+            /*width: 100%;*/
         }
         .main .login-main-row-left{
             width: 25%;
@@ -100,6 +103,7 @@
             float: left;
             text-align: center;
             background-color: #D0D0D0;
+            border: 1px solid #D0D0D0;
         }
         .main .login-main-row-left-span{
             font-size: 14px;
@@ -115,6 +119,60 @@
             height: 34px;
             background-color: #ffffff;
             border: none;
+        }
+        .main .login-main-row-loginButton{
+            margin-top: 30px;
+        }
+        .main .loginButton-div{
+            padding: 0px 20px;
+            width: 100%;
+        }
+        .main .loginButton{
+            color: #fff;
+            background-color: #d9534f;
+            width: 100%;
+            display: inline-block;
+            padding: 6px 12px;
+            margin-bottom: 0;
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 1.42857143;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            touch-action: manipulation;
+            cursor: pointer;
+        }
+        .foot {
+            width: 100%;
+            height: 50px;
+        }
+        .foot .foot-inner{
+            width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 20px;
+        }
+        .foot-inner p {
+            font-size: 15px;
+        }
+        .foot-inner a{
+            color: #333333;
+            text-decoration: none;
+            cursor: pointer;
+            outline: none !important;
+        }
+        .foot-inner img {
+            vertical-align: middle;
+            width:30px;
+            height:30px;
+            cursor:pointer;
+        }
+        .foot-inner span {
+            color: #333333;
+            outline: none !important;
         }
     </style>
 </head>
@@ -136,19 +194,46 @@
             <div class="login-main">
                 <div class="login-main-row">
                     <div class="login-main-row-left">
-                        <span class="login-main-row-left-span">手机号</span>
+                        <span class="login-main-row-left-span">账号</span>
                     </div>
                     <div class="login-main-row-right">
                         <input type="text" id="userCode" name="userCode" class="login-main-input">
                     </div>
                 </div>
-
+                <div class="login-main-row">
+                    <div class="login-main-row-left">
+                        <span class="login-main-row-left-span">密码</span>
+                    </div>
+                    <div class="login-main-row-right">
+                        <input type="text" id="password" name="password" class="login-main-input">
+                    </div>
+                </div>
+                <div class="login-main-row">
+                    <div class="login-main-row-left">
+                        <span class="login-main-row-left-span">验证码</span>
+                    </div>
+                    <div class="login-main-row-right">
+                        <input type="text" id="code" name="code" class="login-main-input">
+                    </div>
+                </div>
+                <div class="login-main-row login-main-row-loginButton">
+                    <div class="loginButton-div">
+                        <button type="button" id="loginButton" class="loginButton">登    录</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
 <div class="foot">
-
+<div class="foot-inner">
+    <p><span>Copyright 版权所有© 2018 磊哥网络科技有限公司 京ICP备06035821号</span></p>
+    <p>
+        <a target="_blank" href="http://www.lolabc.cn">网站首页</a>&nbsp;&nbsp;
+        |&nbsp;&nbsp;<a target="_blank" href="#"><img src="image/favicon.ico"></a>&nbsp;&nbsp;
+        |&nbsp;&nbsp;<a target="_blank" href="#">关于我们</a>
+    </p>
+</div>
 </div>
 </body>
 </html>
