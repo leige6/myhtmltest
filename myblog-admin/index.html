@@ -114,11 +114,21 @@
             float: right;
             border: 1px solid #D0D0D0;
         }
+
         .main .login-main-input{
             width: 100%;
             height: 34px;
             background-color: #ffffff;
             border: none;
+        }
+        .main .login-main-input-code{
+            width: 40%;
+            float: left;
+        }
+        .login-main-row .captcha{
+            width: 35%;
+            float: left;
+            padding-left: 5%;
         }
         .main .login-main-row-loginButton{
             margin-top: 30px;
@@ -212,9 +222,10 @@
                     <div class="login-main-row-left">
                         <span class="login-main-row-left-span">验证码</span>
                     </div>
-                    <div class="login-main-row-right">
+                    <div class="login-main-row-right login-main-input-code">
                         <input type="text" id="code" name="code" class="login-main-input">
                     </div>
+                    <img class="captcha" src="/captcha.jpg">
                 </div>
                 <div class="login-main-row login-main-row-loginButton">
                     <div class="loginButton-div">
